@@ -1,11 +1,11 @@
-var bouncyDancer = function(top, left, timeBetweenSteps) {
+var makeBouncyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
 };
 
-bouncyDancer.prototype = Object.create(makeDancer.prototype);
-bouncyDancer.prototype.constructor = bouncyDancer;
+makeBouncyDancer.prototype = Object.create(makeDancer.prototype);
+makeBouncyDancer.prototype.constructor = makeBouncyDancer;
 
-bouncyDancer.prototype.step = function() {
+makeBouncyDancer.prototype.step = function() {
   makeDancer.prototype.step.call(this);
   this.$node2.toggle();
 };

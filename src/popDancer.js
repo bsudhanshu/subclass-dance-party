@@ -1,11 +1,11 @@
-var popDancer = function(top, left, timeBetweenSteps) {
+var makePopDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
 };
 
-popDancer.prototype = Object.create(makeDancer.prototype);
-popDancer.prototype.constructor = popDancer;
+makePopDancer.prototype = Object.create(makeDancer.prototype);
+makePopDancer.prototype.constructor = makePopDancer;
 
-popDancer.prototype.step = function() {
+makePopDancer.prototype.step = function() {
   makeDancer.prototype.step.call(this);
   this.$node1.toggle();
 };
